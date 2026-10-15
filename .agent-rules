@@ -1,0 +1,19 @@
+# Antigravity & Agent Guardrails for Tiger Cloud
+
+[safety]
+default_mode = "prod"
+enforce_read_only_on_prod = true
+enforce_select_limit = 100
+require_fork_for_migrations = true
+
+[tiger_mcp]
+binary = "tiger"
+command = ["tiger", "mcp", "start"]
+enabled_skills = [
+  "setup-timescaledb-hypertables",
+  "find-hypertable-candidates",
+  "pgvector-semantic-search",
+  "postgres-hybrid-text-search",
+  "postgres-database-migration",
+  "timescaledb-hyperfunctions"
+]
